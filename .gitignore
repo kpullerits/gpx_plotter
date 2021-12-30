@@ -38,8 +38,8 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# no gpx
-.gpx
+# gpx files
+*.gpx
 
 # quarantine folder
-output/quarantine/
+/output/quarantine/
