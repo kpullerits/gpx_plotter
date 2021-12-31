@@ -1,16 +1,10 @@
 library(plotKML)
 library(ggmap)
 library(tidyverse)
-library(BBmisc)
 library(plotly)
-library(mapproj)
 library(htmlwidgets)
 library(lubridate)
-library(XML)
 library(gganimate)
-library(gifski)
-library(av)
-library(knitr)
 
 # Read input gpx -------------------------------------------------------
 
@@ -182,11 +176,14 @@ anim_save("./output/map.gif", animate(anim , end_pause = set_end_pause_frames, f
                                       height = 8, width = 12, units = "in", res = 150))
 
 
-anim_save("./output/map_old.gif", animate(anim , end_pause = 100, fps = 20, duration = 20,
-                                        height = 8, width = 12, units = "in", res = 150))
-
-
 save(
+  df,
+  names_activities_input,
+  names_activities_plot,
+  maptypes,
+  set_latitude,
+  set_longitude,
+  map,
   map_plot,
   map_plot_plotly,
   file = "./output/data.Rdata"
