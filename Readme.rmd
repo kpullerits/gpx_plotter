@@ -1,8 +1,7 @@
 ---
 title: "Readme"
-output: 
-  html_document:
-    keep_md: true
+output: github_document
+always_allow_html: true
 ---
 
 ```{r setup, include = FALSE}
