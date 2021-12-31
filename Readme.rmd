@@ -20,7 +20,7 @@ print(map_plot)
 ## Plotly map
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
-ggplotly(map_plot_plotly, tooltip=c("text"))
+# ggplotly(map_plot_plotly, tooltip=c("text"))
 ```
 
 
