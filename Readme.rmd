@@ -10,10 +10,10 @@ library(plotly)
 library(htmlwidgets)
 load("./output/data.Rdata")
 ```
-## Pdf map
+## Pdf/png map
 
 ```{r, echo = FALSE}
-print(map_plot)
+knitr::include_graphics("./output/map.png")
 ```
 
 

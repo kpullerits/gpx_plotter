@@ -1,9 +1,9 @@
 Readme
 ================
 
-## Pdf map
+## Pdf/png map
 
-![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+<img src="./output/map.png" width="3600" />
 
 ## Plotly map
 
