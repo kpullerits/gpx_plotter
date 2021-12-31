@@ -1,8 +1,8 @@
 ---
 title: "Readme"
-output: github_document
-
-always_allow_html: true
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include = FALSE}
@@ -13,31 +13,18 @@ load("./output/data.Rdata")
 ```
 ## Pdf map
 
-```{r, fig.dim = c(8,12),echo=FALSE}
+```{r, echo = FALSE}
 print(map_plot)
-
 ```
 
 
 ## Plotly map
 
 ```{r, echo=FALSE, message = FALSE, warning = FALSE}
-p <- ggplotly(map_plot_plotly, tooltip=c("text"))
+ggplotly(map_plot_plotly, tooltip=c("text"))
 ```
 
-```{r include, echo = FALSE}
-htmlwidgets::saveWidget(p, "index.html")
 
-htmltools::tags$iframe(
-  src=file.path(getwd(), "index.html"),
-  width="100%",
-  height="600",
-  scrolling="no",
-  seamless="seamless",
-  frameBorder="0"
-)
-
-```
 
 ## Gif map
 
