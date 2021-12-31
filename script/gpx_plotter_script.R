@@ -80,6 +80,7 @@ map_plot <- ggmap(map)+
   theme_minimal()
 
 ggsave(map_plot, path = "output", filename = "map.pdf", device = "pdf", width = 12, height = 8)
+ggsave(map_plot, path = "output", filename = "map.png", device = "png", width = 12, height = 8)
 
 # plotly ------------------------------------------------------------------
 
@@ -113,7 +114,6 @@ result_path <- paste(getwd(), "/output/", sep = "")
 ggplotly(map_plot_plotly, width = 12, height = 8, tooltip = "text", unit = "in") %>% 
   htmlwidgets::saveWidget(., paste(result_path, "map.html", sep=""))
 
-
 # animation ---------------------------------------------------------------
 
 # remove half points to save some time
@@ -131,7 +131,6 @@ for (i in unique(df_animation$id)) {
            lat = NA,
            time = time + 1)
   df_animation <- rbind(df_animation,last_time_plus)
-  
 }
 
 # animate
@@ -161,11 +160,9 @@ p <- ggmap(map)+
        color = "")+
   theme_minimal()
 
-
 anim <- p + 
   transition_reveal(timepoint)+
   labs(title = "Date: {df_animation %>% filter(timepoint == frame_along) %>% pull(time) %>% as_date()}")
-
 
 set_fps = 30
 set_end_pause_time = 4 #seconds
