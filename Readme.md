@@ -66,7 +66,7 @@ The map can be zoomed by adjusting the latitude (`set_latitude`) and
 longitude (`set_latitude`) parameters. The map type is changed with the
 `get_stamenmap` function. Below are three example maps:
 
-![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+<img src="./README_figures/readme_maps.png" width="10800" />
 
 Planned tasks in the project is to make it into an [R
 package](https://r-pkgs.org/) and [R
