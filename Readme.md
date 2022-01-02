@@ -3,7 +3,10 @@ gpx\_plotter
 
 The goal of gpx\_plotter is to plot GPS data from multiple .gpx files
 onto a map. Gpx files used below were sports activities during 2020 -
-2021 in Uppsala. Output files from the script are:
+2021 in Uppsala. [Output
+files](https://github.com/kriputest/gpx_plotter/tree/main/output) from
+the [script](https://github.com/kriputest/gpx_plotter/tree/main/script)
+are:
 
 -   .png/.pdf maps
 -   .gif (animation)
