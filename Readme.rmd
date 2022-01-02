@@ -79,9 +79,14 @@ map2 <- ggmap(maps[[2]]) + labs(title = names(maps[2]))
 map3 <- ggmap(maps[[3]]) + labs(title = names(maps[3]))
 
 
-ggarrange(map1, map2, map3, nrow = 1)
+p_maps <- ggarrange(map1, map2, map3, nrow = 1)
 
 ```
+
+```{r, echo=FALSE}
+print(p_maps)
+```
+
 
 Planned tasks in the project is to make it into an [R package](https://r-pkgs.org/) and [R Shiny](https://mastering-shiny.org/) app.
 
