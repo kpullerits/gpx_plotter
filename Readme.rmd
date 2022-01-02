@@ -80,7 +80,7 @@ map3 <- ggmap(maps[[3]]) + labs(title = names(maps[3]))
 
 
 p_maps <- ggarrange(map1, map2, map3, nrow = 1)
-ggsave(p_maps, path = "README_figures", filename = "readme_maps.png", device = "png", width = 36, height = 8)
+ggsave(p_maps, path = "README_figures", filename = "readme_maps.png", device = "png", width = 22, height = 6)
 
 ```
 
