@@ -74,13 +74,13 @@ for (maptype in c(maptypes[13], maptypes[1], maptypes[5])) {
   maps[[maptype]] <- map
 
 }
-map1 <- ggmap(maps[[1]]) + labs(title = names(maps[1]))
-map2 <- ggmap(maps[[2]]) + labs(title = names(maps[2]))
-map3 <- ggmap(maps[[3]]) + labs(title = names(maps[3]))
+map1 <- ggmap(maps[[1]]) + labs(title = names(maps[1]), x = "Longitude", y = "Latitude")
+map2 <- ggmap(maps[[2]]) + labs(title = names(maps[2]), x = "Longitude", y = "Latitude")
+map3 <- ggmap(maps[[3]]) + labs(title = names(maps[3]), x = "Longitude", y = "Latitude")
 
 
 p_maps <- ggarrange(map1, map2, map3, nrow = 1)
-ggsave(p_maps, path = "README_figures", filename = "readme_maps.png", device = "png", width = 22, height = 6)
+ggsave(p_maps, path = "README_figures", filename = "readme_maps.png", device = "png", width = 12, height = 3)
 
 ```
 
